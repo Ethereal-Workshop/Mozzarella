@@ -12,6 +12,5 @@ However, this does not mean it was the only name idea we had. Archimax couldn't 
 ![nameitpizza](assets/pizza.png)
 
 # Credits
-Sophie - Making the scripts, ascii, and icon
-
-Archimax - Cleaning up and formatting the scripts
+- [Sophie](https://github.com/sophiaasophieee) - Making the scripts, ascii, and icon
+- [Archimax](https://github.com/EnterTheVoid-x86) - Cleaning up and formatting the scripts
