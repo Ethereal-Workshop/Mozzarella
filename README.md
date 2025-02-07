@@ -13,4 +13,5 @@ However, this does not mean it was the only name idea we had. Archimax couldn't 
 
 # Credits
 Sophie - Making the scripts, ascii, and icon
+
 Archimax - Cleaning up and formatting the scripts
