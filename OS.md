@@ -3,9 +3,6 @@
 
 Anyways, here are the steps.
 
-**Step 0: Enable Multiple Containers**
-- Enable `#crostini-multi-container` in [chrome://flags](chrome://flags)
-
 **Step 1: Remove Debian**
 - Use Ctrl-Alt-T to open the crosh terminal (you do NOT need developer mode or shell access, don't worry), 
 - Run `vmc destroy termina`
