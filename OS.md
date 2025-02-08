@@ -18,7 +18,7 @@ Anyways, here are the steps.
 - Click on the date, and copy what is after lxc launch images:
 
 **Step 4: Adding the container**
-- Back in termina, run `lxc launch images:***Your Selected Distro*** penguin --config security.privileged=true`
+- Back in termina, run `lxc launch images:***Paste the copied text here*** penguin --config security.privileged=true`
 - Run `lxc list` and verify that there is `penguin`
 - Run `lxc start penguin` if it is not started
 - Run `lxc exec arch -- bash` 
