@@ -7,4 +7,3 @@ welcome
 . functions/options.sh
 
 
-# test
