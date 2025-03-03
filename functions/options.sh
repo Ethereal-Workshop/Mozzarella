@@ -1,12 +1,6 @@
 while true; do
      clear
-     echo -e "${ascii}"
-     echo -e "\n${COLOR_GREEN_B}Welcome to Mozzarella! Made by Ethereal Workshop\e[0m\n"
-     echo -e "${BOLD}Credits:${COLOR_RESET}"
-     echo -e "- Sophie: Made the script and came up with the name"
-     echo -e "- Archimax: Tried to make ASCII art for this script"
-
-
+     welcome
      echo -e "${COLOR_RED_B}Please select an option or press 'e' to end the script.${COLOR_RESET}\n"
      echo -e "${COLOR_RED_B}(E) Exit${COLOR_RESET}"
      echo -e "(1) Change the titlebar color at the top of Linux apps"

@@ -47,4 +47,3 @@ welcome() {
 	echo -e "- Archimax: Script cleanup (the google-ification)"
 }
 
-welcome
