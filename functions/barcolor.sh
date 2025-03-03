@@ -3,7 +3,7 @@ function write2sommelier {
 	r=$(printf '%d' 0x${HEXCODE:0:2})
 	g=$(printf '%d' 0x${HEXCODE:2:2})
 	b=$(printf '%d' 0x${HEXCODE:4:2})
-	echo -e "[Service]\nEnvironment=\"SOMMELIER_FRAME_COLOR=#$HEXCODE\"" > ~/.config/systemd/user/sommelier-x@0.service.d/override.conf
+	echo -e "[Service]\nEnvironment=\"SOMMELIER_FRAME_COLOR=#$HEXCODE\"" > /home/$WHO_USER/.config/systemd/user/sommelier-x@0.service.d/override.conf
 
 	echo -e "The top bar of apps installed using Linux will be $HEXCODE \x1b[48;2;$r;$g;${b}m  \x1b[0m. Press enter to return to the main menu or press 'b' to change the color.\n"
 	echo -e "${COLOR_PURPLE_B}PLEASE REMEMBER TO SHUT DOWN LINUX AND TURN IT BACK ON!\e[0m\n \x1b[0m"
@@ -17,7 +17,7 @@ function write2sommelier {
 
 
 clear
-mkdir -p ~/.config/systemd/user/sommelier-x@0.service.d
+mkdir -p /home/$WHO_USER/.config/systemd/user/sommelier-x@0.service.d
 echo -e "${BOLD}Choose a color${COLOR_RESET}\n"
 
 echo -e "${COLOR_RED_B}(E) Exit${COLOR_RESET}"
@@ -52,5 +52,5 @@ case $color in
     e|E) return ;;
     t|T) echo -e "Check to make sure your chosen hexcode is in the results, and then press enter to return to mozzarella.\n"
     echo -e "Default: #343538\nWhite: #FFFFFF\nCustom: ${HEXCODE}\nLatte: #eff1f5\nFrappe: #303446\nMacchiato: #24273a\nMocha: #1e1e2e\n"
-    cat ~/.config/systemd/user/sommelier-x@0.service.d/override.conf
+    cat /home/$WHO_USER/.config/systemd/user/sommelier-x@0.service.d/override.conf
 esac

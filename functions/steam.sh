@@ -1,6 +1,7 @@
 #!/bin/bash
 
 clear
+echo -e "${BOLD}Install ${COLOR_BLUE_B}Steam${COLOR_RESET}${BOLD} on Crostini ${COLOR_RESET}\n"
 
 fail() {
     # special one time use case! kill me

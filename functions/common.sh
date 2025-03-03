@@ -12,6 +12,12 @@ COLOR_CYAN_B="\033[1;36m"
 COLOR_LIGHT_YELLOW_B="\033[1m\e[33m"
 BOLD="\033[1m"
 
+WHO_USER=$(who -m | awk '{print $1}')
+
+if [ $WHO_USER != "root" ]; then
+  user = $WHO_USER
+fi
+
 read -rd '' ascii <<'EOF'
 \033[0;30m                                                      @@@@@@@@@@@@                       
 \033[0;30m                             @@@@@@@@@@@@@@@@@@@@@@@@@@@\033[1m\e[32m@@@@@@@@@@\033[0;30m@@@@@                 
@@ -33,6 +39,14 @@ read -rd '' ascii <<'EOF'
 \033[0;30m                    @@@@@@@@@@@@@@                                                  
 EOF
 
+
+
+
+
+
+read -rd '' guitar <<'EOF'
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv                                                     33333333333333333333333334ddb btbbbbbbbbbbbbbbbbbbbbbbbbbbbbtvtttbvvvvvvvvvvvvvvvvvvvvvvvvvbttvvvvvvvvttv   4 bbbbbbbbttttttbt5vvvvvvvvvvvvvvvvvvvvvvvvvvvttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt5v55v5555555bt55bv555555555555555555555555555555555                                                                                                                                  mmmuuuuuuuuuuuuuuuu  44444444444
+EOF
 RGB_DEFAULT="\x1b[48;2;52;53;56m  \x1b[0m"
 RGB_WHITE="\x1b[48;2;255;255;255m  \x1b[0m"
 RGB_RAINBOW="\x1b[48;2;255;0;0m  \x1b[48;2;255;165;0m  \x1b[48;2;0;255;255m  \x1b[48;2;0;255;0m  \x1b[48;2;0;0;255m  \x1b[48;2;128;0;128m  \x1b[0m"
@@ -45,5 +59,5 @@ welcome() {
 	echo -e "${BOLD}Credits:${COLOR_RESET}"
 	echo -e "- Sophie: Made the script and came up with the name"
 	echo -e "- Archimax: Script cleanup (the google-ification)"
+	echo -e "- You: Being named $WHO_USER."
 }
-
