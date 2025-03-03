@@ -10,7 +10,7 @@ while true; do
 
      read -p "> " -n1 options
      case $options in
-          e|E) clear && echo -n "Thank you for using Mozzarella." 
+          e|E) clear && echo -e "Thank you for using Mozzarella.\n" 
               [ "$rng" -eq 63 ] && echo -e "mamma mia pizza pasta its-a me, mario\n"
               return ;;          
           1) . functions/barcolor.sh ;;
