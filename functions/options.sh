@@ -5,6 +5,7 @@ while true; do
      echo -e "${COLOR_RED_B}(E) Exit${COLOR_RESET}"
      echo -e "(1) Change the titlebar color at the top of Linux apps"
      echo -e "(2) Install Steam on ChromeOS (Can be unstable)"
+     echo -e "(3) Change the desktop icon of a linux app"
      
      rng=$(( (RANDOM % 100) + 1 ))
 
@@ -16,6 +17,7 @@ while true; do
               return ;;          
           1) . functions/barcolor.sh ;;
           2) . functions/steam.sh ;;
+          3) . functions/icons.sh ;;
           *) clear && echo -e "${COLOR_RED_B}Invalid option ${options}${COLOR_RESET}" ;;
      esac
 done
