@@ -2,7 +2,25 @@
 
 clear
 
-[ "$EUID" -ne 0 ] && echo "Please re-run Mozzarella as root to install Steam!" && read -p "Press enter to return to the main menu." && return
+fail() {
+    # special one time use case! kill me
+    printf "%b\n" "$*" >&2 || :
+    exit 1
+}
+
+# [ "$EUID" -ne 0 ] && echo -e "${COLOR_RED_B}Please re-run Mozzarella as root to install Steam!${COLOR_RESET}" && read -p "Press enter to return to the main menu." && return
+
+ID=
+ID_LIKE=
+# failsafes
+
+. /etc/os-release || fail "${COLOR_RED_B}os-release not found! Failing.${COLOR_RESET}"
+
+if [[ "$ID" != "debian" && "$ID_LIKE" != *"debian"* ]]; then
+    echo -e "${COLOR_RED_B}Mozzarella currently only supports installing Steam on Debian.${COLOR_RESET}"
+    read -p "Press enter to return to the main menu."
+    return
+fi
 
 if apt list --installed 2>/dev/null | grep -q steam-launcher; then
     echo -e "\nSteam is already installed."
