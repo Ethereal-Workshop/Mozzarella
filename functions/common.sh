@@ -45,7 +45,6 @@ welcome() {
 	echo -e "${BOLD}Credits:${COLOR_RESET}"
 	echo -e "- Sophie: Made the script and came up with the name"
 	echo -e "- Archimax: Script cleanup (the google-ification)"
-
 }
 
 welcome
