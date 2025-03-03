@@ -39,10 +39,10 @@ RGB_RAINBOW="\x1b[48;2;255;0;0m  \x1b[48;2;255;165;0m  \x1b[48;2;0;255;255m  \x1
 
 HEXCODE="#343538"
 
-welcome() {
-    echo -e "${ascii}"
-    echo -e "\n${COLOR_GREEN_B}Welcome to Mozzarella! Made by Ethereal Workshop\e[0m\n"
-    echo -e "${BOLD}Credits:${COLOR_RESET}"
-    echo -e "- Sophie: Made the script and came up with the name"
-    echo -e "- Archimax: Tried to make ASCII art for this script"    
-}
+clear
+echo -e "${ascii}"
+echo -e "\n${COLOR_GREEN_B}Welcome to Mozzarella! Made by Ethereal Workshop\e[0m\n"
+echo -e "${BOLD}Credits:${COLOR_RESET}"
+echo -e "- Sophie: Made the script and came up with the name"
+echo -e "- Archimax: Tried to make ASCII art for this script"
+. functions/options.sh

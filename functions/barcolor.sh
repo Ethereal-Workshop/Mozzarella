@@ -11,13 +11,12 @@ function write2sommelier {
 	read -p "" -n1 return
 	case $return in
 		b|B) . functions/barcolor.sh ;;
-		*) clear && welcome ;;
+		*) clear ;;
 	esac
 }
 
 
 clear
-PS1=""
 mkdir -p ~/.config/systemd/user/sommelier-x@0.service.d
 echo -e "${BOLD}Choose a color${COLOR_RESET}\n"
 
@@ -50,13 +49,8 @@ case $color in
 	write2sommelier;;
     mo) HEXCODE="1e1e2e"  
 	write2sommelier;;
-    e|E) bash ./mozzarella.sh ;;
+    e|E) return ;;
     t|T) echo -e "Check to make sure your chosen hexcode is in the results, and then press enter to return to mozzarella.\n"
     echo -e "Default: #343538\nWhite: #FFFFFF\nCustom: ${HEXCODE}\nLatte: #eff1f5\nFrappe: #303446\nMacchiato: #24273a\nMocha: #1e1e2e\n"
-    cat ~/.config/systemd/user/sommelier-x@0.service.d/override.conf 
-    read -p "" tExit
-    case $tExit in
-	    *) . functions/barcolor.sh
-    esac ;;
-    *) . functions/barcolor.sh ;;
+    cat ~/.config/systemd/user/sommelier-x@0.service.d/override.conf
 esac
