@@ -8,7 +8,7 @@ fail() {
     exit 1
 }
 
-# [ "$EUID" -ne 0 ] && echo -e "${COLOR_RED_B}Please re-run Mozzarella as root to install Steam!${COLOR_RESET}" && read -p "Press enter to return to the main menu." && return
+[ "$EUID" -ne 0 ] && echo -e "${COLOR_RED_B}Please re-run Mozzarella as root to install Steam!${COLOR_RESET}" && read -p "Press enter to return to the main menu." && return
 
 ID=
 ID_LIKE=
