@@ -11,10 +11,14 @@ while true; do
      echo -e "${COLOR_RED_B}(E) Exit${COLOR_RESET}"
      echo -e "(1) Change the titlebar color at the top of Linux apps"
      echo -e "(2) Install Steam on ChromeOS (Can be unstable)"
+     
+     rng=$(( (RANDOM % 100) + 1 ))
 
      read -p "> " -n1 options
      case $options in
-          e|E) clear && echo -e "Thank you for using Mozzarella. mamma mia pizza pasta its-a me, mario\n" && return ;;
+          e|E) clear && echo -n "Thank you for using Mozzarella." 
+              [ "$rng" -eq 63 ] && echo -e "mamma mia pizza pasta its-a me, mario\n"
+              return ;;          
           1) . functions/barcolor.sh ;;
           2) . functions/steam.sh ;;
           *) clear && echo -e "${COLOR_RED_B}Invalid option ${options}${COLOR_RESET}" ;;
