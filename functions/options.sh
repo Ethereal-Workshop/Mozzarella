@@ -3,7 +3,7 @@ while true; do
      welcome
      echo -e "${COLOR_GREEN_B}Please select an option or press 'e' to end the script.${COLOR_RESET}\n"
      echo -e "${COLOR_RED_B}(E) Exit${COLOR_RESET}"
-     echo -e "(1) Change the titlebar color at the top of Linux apps"
+     echo -e "(1) Change the titlebar color at the top of Linux apps, also fully fixes some like VSCode"
      echo -e "(2) Install Steam on Crostini (Can be unstable)"
      echo -e "(3) Change the desktop icon of a linux app"
      echo -e "(4) Hide a linux desktop app without deleting it"
