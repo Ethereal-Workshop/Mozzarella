@@ -7,7 +7,6 @@ while true; do
      echo -e "(2) Install Steam on Crostini (Can be unstable)"
      echo -e "(3) Change the desktop icon of a linux app"
      echo -e "(4) Hide a linux desktop app without deleting it"
-     echo -e -n "${COLOR_RESET}"
      
      rng=$(( (RANDOM % 100) + 1 ))
      rng1=$(( (RANDOM % 1000) + 1 ))
