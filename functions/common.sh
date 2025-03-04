@@ -54,13 +54,18 @@ RGB_WHITE="\x1b[48;2;255;255;255m  \x1b[0m"
 RGB_RAINBOW="\x1b[48;2;255;0;0m  \x1b[48;2;255;165;0m  \x1b[48;2;0;255;255m  \x1b[48;2;0;255;0m  \x1b[48;2;0;0;255m  \x1b[48;2;128;0;128m  \x1b[0m"
 
 HEXCODE="#343538"
+pioneerng=$(( (RANDOM % 100) + 1 ))
 
 welcome() {
 	echo -e "${ascii}"
 	echo -e "\n${COLOR_GREEN_B}Welcome to Mozzarella! Made by Ethereal Workshop\e[0m\n"
 	echo -e "${BOLD}Credits:${COLOR_RESET}"
-	echo -e "- Sophie: Made the script and came up with the name"
-	echo -e "- Archimax: Script cleanup (the google-ification)"
+	if test "$pioneerng" = "69"; then
+	echo -e "- Sophie: Pioneering this wild script"
+	else
+	echo -e "- Sophie: Made all the scripts"
+    fi
+	echo -e "- Archimax: Cleaned up all the scripts"
 	echo -e "- You: Being named $WHO_USER."
 	echo -e ""
 }
