@@ -5,6 +5,9 @@ if [ -d /home/'Linux Home' ]; then
 		y|Y) cd /home/
     rm -rf $WHO_USER
     mv 'Linux Home' $WHO_USER
+    sed -i '/function squiggly/,+7d' /home/$WHO_USER/.bashrc
+    sed -i '/PROMPT_COMMAND=squiggly/d' /home/$WHO_USER/.bashrc
+
 		n|N) return ;;
     *) return ;;
 	esac
