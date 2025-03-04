@@ -63,7 +63,7 @@ welcome() {
 	if test "$pioneerng" = "69"; then
 	echo -e "- Sophie: Pioneering this wild script"
 	else
-	echo -e "- Sophie: Made all the scripts"
+	echo -e "- Sophie: Made all the scripts and the name"
     fi
 	echo -e "- Archimax: Cleaned up all the scripts"
 	echo -e "- You: Being named $WHO_USER."
