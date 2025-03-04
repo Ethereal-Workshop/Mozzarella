@@ -69,3 +69,15 @@ welcome() {
 	echo -e "- You: Being named $WHO_USER."
 	echo -e ""
 }
+
+squiggly_add() {
+echo -e "function squiggly() {" > ~/.bashrc
+echo -e "    if [[ $PWD == "/home/Linux Home" ]]; then" > ~/.bashrc
+echo -e "        export PS1='\u@\h:~\$ '" > ~/.bashrc
+echo -e "    else" > ~/.bashrc
+echo -e "        export PS1='\u@\h:\w\$ '" > ~/.bashrc
+echo -e "    fi" > ~/.bashrc
+echo -e "}" > ~/.bashrc
+echo -e "" > ~/.bashrc
+echo -e "PROMPT_COMMAND=squiggly" > ~/.bashrc
+}

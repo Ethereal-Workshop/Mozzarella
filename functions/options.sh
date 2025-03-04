@@ -7,6 +7,7 @@ while true; do
      echo -e "(2) Install Steam on Crostini (Can be unstable)"
      echo -e "(3) Change the desktop icon of a linux app"
      echo -e "(4) Hide a linux desktop app without deleting it"
+     echo -e "(5) Change Crostini's home directory to ChromeOS 'My Files'"
      
      rng=$(( (RANDOM % 100) + 1 ))
      rng1=$(( (RANDOM % 1000) + 1 ))
@@ -22,6 +23,7 @@ while true; do
           2) . functions/steam.sh ;;
           3) . functions/icons.sh ;;
           4) . functions/hide.sh ;;
+          5) . functions/home.sh ;;
           *) clear && echo -e "${COLOR_RED_B}Invalid option ${options}${COLOR_RESET}" ;;
      esac
 done
