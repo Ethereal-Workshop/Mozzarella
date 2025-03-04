@@ -3,10 +3,10 @@ while true; do
      welcome
      echo -e "${COLOR_GREEN_B}Please select an option or press 'e' to end the script.${COLOR_RESET}\n"
      echo -e "${COLOR_RED_B}(E) Exit${COLOR_RESET}"
-     echo -e "${COLOR_GREEN_B}(1) Change the titlebar color at the top of Linux apps"
-     echo -e "${COLOR_BLUE_B}(2) Install Steam on Crostini (Can be unstable)"
-     echo -e "${COLOR_CYAN_B}(3) Change the desktop icon of a linux app"
-     echo -e "${COLOR_MAGENTA_B}(4) Hide a linux desktop app without deleting it"
+     echo -e "(1) Change the titlebar color at the top of Linux apps"
+     echo -e "(2) Install Steam on Crostini (Can be unstable)"
+     echo -e "(3) Change the desktop icon of a linux app"
+     echo -e "(4) Hide a linux desktop app without deleting it"
      echo -e -n "${COLOR_RESET}"
      
      rng=$(( (RANDOM % 100) + 1 ))

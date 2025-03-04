@@ -11,7 +11,7 @@ if [ ! -f /usr/share/applications/"$desktop".desktop ]; then
   return
 fi
 echo -e "Path to the PNG image you'd like to replace the icon with. (EX: /home/$WHO_USER/Pictures/icon.png). This file will be stored in the applications directory, you can delete the original file."
-echo -e "Or, type 'restore' to restore the original icon"
+echo -e "${BOLD}Or, type 'restore' to restore the original icon${COLOR_RESET}"
 mkdir -p /usr/share/applications/customicons/
 mkdir -p /usr/share/applications/bak/
 read -p "> " IMAGE
