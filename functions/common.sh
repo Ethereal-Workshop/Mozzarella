@@ -80,6 +80,9 @@ echo -e "    fi" >> /home/$WHO_USER/.bashrc
 echo -e "}" >> /home/$WHO_USER/.bashrc
 echo -e "" >> /home/$WHO_USER/.bashrc
 echo -e "PROMPT_COMMAND=squiggly" >> /home/$WHO_USER/.bashrc
-echo -e "cd /home/MyFiles" >> /home/$WHO_USER/.bashrc
+echo -e "cd /home/MyFiles/" >> /home/$WHO_USER/.bashrc
+echo -e "function home() {" >> /home/$WHO_USER/.bashrc
+echo -e "	cd /home/MyFiles/" >> /home/$WHO_USER/.bashrc
+echo -e "}" >> /home/$WHO_USER/.bashrc
 source /home/$WHO_USER/.bashrc
 }

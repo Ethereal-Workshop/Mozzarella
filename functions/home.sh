@@ -18,8 +18,7 @@ else
   fi
   squiggly_add
   ln -s /mnt/chromeos/MyFiles /home/MyFiles
-  echo -e "Done."
-  sleep 0.5
+  echo -e "Done. Run 'home' in terminal to return to 'MyFiles' whenever you need to." && read -p "" -n1
   return
 fi
 
