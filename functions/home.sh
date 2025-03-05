@@ -2,9 +2,10 @@ if [ -d /home/'MyFiles' ]; then
   echo -e "\n'MyFiles' Detected. Would you like to revert the changes and set the opened directory back to normal? (y/n)" 
   read -p "" -n1 revert
 	case $revert in
-		y|Y) sed '/function squiggly() {/,/cd \/home\/MyFiles/d' /home/$WHO_USER/.bashrc
+		y|Y) sed -i '/#home.sh/d' /home/$WHO_USER/.bashrc
     source /home/$WHO_USER/.bashrc
-    rm /home/MyFiles ;;
+    rm /home/MyFiles 
+    return ;;
 		n|N) return ;;
     *) return ;;
 	esac
@@ -16,9 +17,9 @@ else
     sleep 1
     return
   fi
-  squiggly_add
+  home_add
   ln -s /mnt/chromeos/MyFiles /home/MyFiles
-  echo -e "Done. Run 'home' in terminal to return to 'MyFiles' whenever you need to." && read -p "" -n1
+  echo -e "Done. MyFiles created at /home/MyFiles." && read -p "" -n1
   return
 fi
 

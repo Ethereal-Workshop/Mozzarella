@@ -70,19 +70,7 @@ welcome() {
 	echo -e ""
 }
 
-squiggly_add() {
-echo -e "function squiggly() {" >> /home/$WHO_USER/.bashrc
-echo -e "    if [[ $PWD == "/home/MyFiles" ]]; then" >> /home/$WHO_USER/.bashrc
-echo -e "        export PS1='\u@\h:~\$ '" >> /home/$WHO_USER/.bashrc
-echo -e "    else" >> /home/$WHO_USER/.bashrc
-echo -e "        export PS1='\u@\h:\w\$ '" >> /home/$WHO_USER/.bashrc
-echo -e "    fi" >> /home/$WHO_USER/.bashrc
-echo -e "}" >> /home/$WHO_USER/.bashrc
-echo -e "" >> /home/$WHO_USER/.bashrc
-echo -e "PROMPT_COMMAND=squiggly" >> /home/$WHO_USER/.bashrc
-echo -e "cd /home/MyFiles/" >> /home/$WHO_USER/.bashrc
-echo -e "function home() {" >> /home/$WHO_USER/.bashrc
-echo -e "	cd /home/MyFiles/" >> /home/$WHO_USER/.bashrc
-echo -e "}" >> /home/$WHO_USER/.bashrc
+home_add() {
+echo -e "cd /home/MyFiles/ #home.sh" >> /home/$WHO_USER/.bashrc
 source /home/$WHO_USER/.bashrc
 }
