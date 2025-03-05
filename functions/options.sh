@@ -7,7 +7,7 @@ while true; do
      echo -e "(2) Install Steam on Crostini (Can be unstable)"
      echo -e "(3) Change the desktop icon of a linux app"
      echo -e "(4) Hide a linux desktop app without deleting it"
-     echo -e "(5) Change Crostini's home directory to ChromeOS 'My Files'"
+     echo -e "(5) Have Crostini terminal automatically open to ChromeOS's 'My Files' Directory"
      
      rng=$(( (RANDOM % 100) + 1 ))
      rng1=$(( (RANDOM % 1000) + 1 ))
