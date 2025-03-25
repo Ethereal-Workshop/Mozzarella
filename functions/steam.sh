@@ -29,12 +29,8 @@ else
     echo -e "\n"
     curl -LOk https://cdn.cloudflare.steamstatic.com/client/installer/steam.deb
     dpkg -i steam.deb
-    curl -L "https://chromium.googlesource.com/chromiumos/platform/dev-util/+/master/contrib/gfx/crostini-steam-setup.sh?format=TEXT" | /usr/bin/base64 -d > /tmp/crostini-steam-setup.sh
-    chmod a+x /tmp/crostini-steam-setup.sh
-    /tmp/crostini-steam-setup.sh
     apt update
     dpkg --add-architecture i386
-    apt install libgl1:i386 libegl1:i386 libgbm1:i386 steam-libs-amd64:amd64 steam-libs-i386:i386
     apt update && apt --fix-broken install && apt upgrade
     apt install --reinstall libgl1-mesa-glx:i386
     apt update
