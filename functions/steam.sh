@@ -35,6 +35,16 @@ else
     apt install --reinstall libgl1-mesa-glx:i386
     apt update
     rm -f steam.deb
+    curl -L "https://chromium.googlesource.com/chromiumos/platform/dev-util/+/master/contrib/gfx/crostini-steam-setup.sh?format=TEXT" | /usr/bin/base64 -d > /tmp/crostini-steam-setup.sh
+    chmod a+x /tmp/crostini-steam-setup.sh
+    /tmp/crostini-steam-setup.sh
+    dpkg --add-architecture i386
+    apt update
+    apt install libgl1:i386 libegl1:i386 libgbm1:i386 steam-libs-amd64:amd64 steam-libs-i386:i386
+    apt update
+    apt upgrade -y
+    rm -f libwaffle-1-0_1.6.0-4+b1_amd64.deb
+    rm -f libwaffle-1-0_1.6.0-4+b1_i386.deb
     echo -e "${COLOR_RED_B}NOTE: WHEN RUNNING THE APP, IT MAY SHOW AN ERROR AND PROMPT A LOGIN. IGNORE IT. IT DOESN'T AFFECT ANYTHING. SADLY A RESULT OF CHROMEOS'S VM.${COLOR_RESET}"
 fi
 echo -e "Hide xterm and uxterm from the application menu? (y/n/[u]nhide)"
