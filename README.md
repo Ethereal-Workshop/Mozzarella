@@ -14,4 +14,4 @@ However, this does not mean it was the only name idea we had. xmb9 couldn't find
 # Credits
 - [Sophie](https://github.com/sophiaasophieee) - Pioneering this wild script & made OS.md
 - [xmb9](https://github.com/EnterTheVoid-x86) - Cleaning up and formatting the scripts
-- [Turtle Boi](https://github.com/Turtlecodez) - Improving Steam payload
+- [turtle boi](https://github.com/Turtlecodez) - Improving Steam payload
