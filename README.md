@@ -15,6 +15,7 @@ However, this does not mean it was the only name idea we had. xmb9 couldn't find
 - [Sophie](https://github.com/sophiaasophieee) - Made the scripts
 - [xmb9](https://github.com/EnterTheVoid-x86) - Cleaning up and formatting the scripts
 - [turtle boi](https://github.com/Turtlecodez) - Improving Steam payload
+- [Synaptic](https://github.com/Synaptic-1234) - Emotional Support
 
 # How to use
 You can download this by hitting the green "Code" button, then hitting Download ZIP and extracting the zip in your Linux files directory
