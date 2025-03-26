@@ -65,6 +65,7 @@ welcome() {
 	else
 	echo -e "- Sophie: Made all the scripts and the name"
     fi
+    	echo -e "- turtle boi: making steam install script better"
 	echo -e "- Archimax: Cleaned up all the scripts"
 	echo -e "- You: Being named $WHO_USER."
 	echo -e ""
